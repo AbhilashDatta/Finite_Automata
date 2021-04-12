@@ -1,0 +1,154 @@
++++ Input NFA
+    Number of states: 24
+    Input alphabet: {0, 1, 2, 3}
+    Start states: {6, 7, 8, 9, 10, 11}
+    Final states: {12, 13, 14, 15, 16, 17}
+    Transition Function
+        Delta(0, 0) = {}
+        Delta(0, 1) = {}
+        Delta(0, 2) = {12}
+        Delta(0, 3) = {0}
+        Delta(1, 0) = {}
+        Delta(1, 1) = {13}
+        Delta(1, 2) = {}
+        Delta(1, 3) = {1}
+        Delta(2, 0) = {}
+        Delta(2, 1) = {}
+        Delta(2, 2) = {14}
+        Delta(2, 3) = {2}
+        Delta(3, 0) = {15}
+        Delta(3, 1) = {}
+        Delta(3, 2) = {}
+        Delta(3, 3) = {3}
+        Delta(4, 0) = {}
+        Delta(4, 1) = {16}
+        Delta(4, 2) = {}
+        Delta(4, 3) = {4}
+        Delta(5, 0) = {17}
+        Delta(5, 1) = {}
+        Delta(5, 2) = {}
+        Delta(5, 3) = {5}
+        Delta(6, 0) = {18}
+        Delta(6, 1) = {}
+        Delta(6, 2) = {}
+        Delta(6, 3) = {6}
+        Delta(7, 0) = {19}
+        Delta(7, 1) = {}
+        Delta(7, 2) = {}
+        Delta(7, 3) = {7}
+        Delta(8, 0) = {}
+        Delta(8, 1) = {20}
+        Delta(8, 2) = {}
+        Delta(8, 3) = {8}
+        Delta(9, 0) = {}
+        Delta(9, 1) = {21}
+        Delta(9, 2) = {}
+        Delta(9, 3) = {9}
+        Delta(10, 0) = {}
+        Delta(10, 1) = {}
+        Delta(10, 2) = {22}
+        Delta(10, 3) = {10}
+        Delta(11, 0) = {}
+        Delta(11, 1) = {}
+        Delta(11, 2) = {23}
+        Delta(11, 3) = {11}
+        Delta(12, 0) = {}
+        Delta(12, 1) = {}
+        Delta(12, 2) = {}
+        Delta(12, 3) = {12}
+        Delta(13, 0) = {}
+        Delta(13, 1) = {}
+        Delta(13, 2) = {}
+        Delta(13, 3) = {13}
+        Delta(14, 0) = {}
+        Delta(14, 1) = {}
+        Delta(14, 2) = {}
+        Delta(14, 3) = {14}
+        Delta(15, 0) = {}
+        Delta(15, 1) = {}
+        Delta(15, 2) = {}
+        Delta(15, 3) = {15}
+        Delta(16, 0) = {}
+        Delta(16, 1) = {}
+        Delta(16, 2) = {}
+        Delta(16, 3) = {16}
+        Delta(17, 0) = {}
+        Delta(17, 1) = {}
+        Delta(17, 2) = {}
+        Delta(17, 3) = {17}
+        Delta(18, 0) = {}
+        Delta(18, 1) = {0}
+        Delta(18, 2) = {}
+        Delta(18, 3) = {18}
+        Delta(19, 0) = {}
+        Delta(19, 1) = {}
+        Delta(19, 2) = {1}
+        Delta(19, 3) = {19}
+        Delta(20, 0) = {2}
+        Delta(20, 1) = {}
+        Delta(20, 2) = {}
+        Delta(20, 3) = {20}
+        Delta(21, 0) = {}
+        Delta(21, 1) = {}
+        Delta(21, 2) = {3}
+        Delta(21, 3) = {21}
+        Delta(22, 0) = {4}
+        Delta(22, 1) = {}
+        Delta(22, 2) = {}
+        Delta(22, 3) = {22}
+        Delta(23, 0) = {}
+        Delta(23, 1) = {5}
+        Delta(23, 2) = {}
+        Delta(23, 3) = {23}
+
+Time taken: 4 milliseconds
++++ Converted DFA
+    Number of states: 16777216
+    Input alphabet: {0, 1, 2, 3}
+    Start state: 4032
+    16515072 final states
+    Transition function: Skipped
+
+Time taken: 10901 milliseconds
++++ Reachable states: {0, 1, 2, 4, 8, 16, 32, 4032, 4096, 8192, 16384, 32768, 65536, 131072, 786432, 3145728, 12582912}
+
+Time taken: 10954 milliseconds
++++ Reduced DFA after removing unreachable states
+    Number of states: 17
+    Input alphabet: {0, 1, 2, 3}
+    Start state: 7
+    Final states: {8, 9, 10, 11, 12, 13}
+    Transition Function
+    a\p|  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16
+    ---+---------------------------------------------------
+     0 |  0  0  0  0 11  0 13 14  0  0  0  0  0  0  0  3  5
+     1 |  0  0  9  0  0 12  0 15  0  0  0  0  0  0  1  0  6
+     2 |  0  8  0 10  0  0  0 16  0  0  0  0  0  0  2  4  0
+     3 |  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16
+
+Time taken: 11012 milliseconds
++++ Equivalent states
+    Group  0: {0}
+    Group  1: {1, 3}
+    Group  2: {2, 5}
+    Group  3: {4, 6}
+    Group  4: {7}
+    Group  5: {8, 9, 10, 11, 12, 13}
+    Group  6: {14}
+    Group  7: {15}
+    Group  8: {16}
+
++++ Reduced DFA after collapsing equivalent states
+    Number of states: 9
+    Input alphabet: {0, 1, 2, 3}
+    Start state: 4
+    Final states: {5}
+    Transition Function
+    a\p|  0  1  2  3  4  5  6  7  8
+    ---+---------------------------
+     0 |  0  0  0  5  6  0  0  1  2
+     1 |  0  0  5  0  7  0  1  0  3
+     2 |  0  5  0  0  8  0  2  3  0
+     3 |  0  1  2  3  4  5  6  7  8
+
+Time taken: 11016 milliseconds
